@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Karakter encoding untuk memastikan tampilan karakter yang benar -->
+    <meta charset="UTF-8" />
+
+    <!-- Mengatur tampilan responsif untuk perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Deskripsi halaman untuk mesin pencari dan sosial media -->
+    <meta
+      name="description"
+      content="Butuh jasa Body Repair di Pekanbaru? Kami menyediakan layanan perbaikan bodi mobil dengan kualitas terbaik, harga terjangkau, dan pengerjaan cepat. Dapatkan pelayanan terbaik di bengkel body repair terpercaya di Pekanbaru."
+    />
+
+    <!-- Kata kunci yang relevan dengan halaman untuk SEO -->
+    <meta
+      name="keywords"
+      content="Body Repair Pekanbaru, jasa body repair Pekanbaru, bengkel body repair Pekanbaru, perbaikan bodi mobil Pekanbaru, body repair terpercaya, body repair murah Pekanbaru, service mobil Pekanbaru"
+    />
+
+    <!-- Nama pembuat atau pemilik situs -->
+    <meta name="author" content="Mohd Purwadi" />
+
+    <!-- Menentukan URL utama untuk halaman, untuk menghindari duplikat konten -->
+    <link
+      rel="canonical"
+      href="https://www.situswebanda.com/body-repair-pekanbaru"
+    />
+
+    <!-- Pengaturan Open Graph untuk media sosial (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Body Repair Pekanbaru - Layanan Perbaikan Bodi Mobil Terbaik"
+    />
+    <meta
+      property="og:description"
+      content="Cari jasa body repair terbaik di Pekanbaru? Dapatkan layanan perbaikan bodi mobil berkualitas dengan harga terjangkau di bengkel kami. Hubungi kami sekarang!"
+    />
+    <meta property="og:image" content="./assets/images/TPMAutomotive.jpg" />
+    <meta
+      property="og:url"
+      content="https://www.bengkellasketokpekanbaru.my.id/"
+    />
+
+    <!-- Twitter Card untuk tampilan di Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Body Repair Pekanbaru - Layanan Perbaikan Bodi Mobil Terbaik"
+    />
+    <meta
+      name="twitter:description"
+      content="Layanan body repair terbaik di Pekanbaru dengan harga terjangkau dan hasil kerja maksimal. Dapatkan pelayanan terbaik hanya di bengkel kami."
+    />
+    <meta name="twitter:image" content="./assets/images/TPMAutomotive.jpg" />
+    <meta
+      name="twitter:url"
+      content="https://www.bengkellasketokpekanbaru.my.id/"
+    />
+
+    <!-- Pengaturan untuk pengindeksan halaman oleh mesin pencari -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Set Judul Halaman yang akan muncul di tab browser -->
+    <title>Body Repair Pekanbaru - Layanan Perbaikan Bodi Mobil Terbaik</title>
+
+    <!-- Favicon untuk browser -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Set favicon di perangkat Apple -->
+    <link rel="apple-touch-icon" href="./assets/images/favicon.ico" />
+
+    <!-- Pengaturan Langkah-langkah atau tindakan untuk SEO lokal -->
+    <meta name="geo.region" content="ID-RI" />
+    <meta name="geo.placename" content="Pekanbaru" />
+    <meta name="geo.position" content="0.5149;101.4473" />
+    <meta name="ICBM" content="0.5149, 101.4473" />
+
+    <link rel="canonical" href="https://www.bengkellasketokpekanbaru.my.id" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-sans pb-16 md:pb-0">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fas fa-car-side text-3xl text-blue-500 mr-2"></i>
+            <span class="text-2xl font-bold"
+              >TPM<span class="text-blue-500"> Automotive</span></span
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#services" class="hover:text-blue-400 transition"
+              >Services</a
+            >
+            <a href="#gallery" class="hover:text-blue-400 transition"
+              >Gallery</a
+            >
+            <a href="#testimonials" class="hover:text-blue-400 transition"
+              >Testimonials</a
+            >
+            <a href="#contact" class="hover:text-blue-400 transition"
+              >Contact</a
+            >
+            <a
+              href="tel:+15551234567"
+              class="call-button text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center"
+            >
+              <i class="fas fa-phone mr-2"></i> Call Now
+            </a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <a
+              href="tel:+15551234567"
+              class="call-button text-white font-bold py-2 px-3 rounded-full transition duration-300 mr-3 flex items-center"
+            >
+              <i class="fas fa-phone"></i>
+            </a>
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a href="#home" class="block py-2 hover:text-blue-400 transition"
+            >Home</a
+          >
+          <a href="#services" class="block py-2 hover:text-blue-400 transition"
+            >Services</a
+          >
+          <a href="#gallery" class="block py-2 hover:text-blue-400 transition"
+            >Gallery</a
+          >
+          <a
+            href="#testimonials"
+            class="block py-2 hover:text-blue-400 transition"
+            >Testimonials</a
+          >
+          <a href="#contact" class="block py-2 hover:text-blue-400 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero flex items-center justify-center text-center text-white"
+    >
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Auto Detailing
+          <span class="text-blue-400">Pekanbaru</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          Layanan body repair terbaik di Pekanbaru dengan harga terjangkau dan
+          hasil kerja maksimal. Dapatkan pelayanan terbaik hanya di bengkel
+          kami.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#contact"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+            >Hubungi Kami</a
+          >
+          <a
+            href="#services"
+            class="bg-transparent hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300 transform hover:scale-105"
+            >Our Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <div class="relative overflow-hidden rounded-xl shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Detailer working on a car"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              Kenapa Memilih <span class="text-blue-600">TPM Automotive</span>?
+            </h2>
+            <p class="text-gray-700 mb-6 text-lg">
+              At ShinePro, we're passionate about restoring vehicles to their
+              original glory. Our team of certified detailers uses only the
+              highest quality products and cutting-edge techniques to deliver
+              exceptional results.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-blue-500 text-xl mr-3 mt-1"
+                ></i>
+                <span class="text-gray-700"
+                  >10+ years of industry experience</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-blue-500 text-xl mr-3 mt-1"
+                ></i>
+                <span class="text-gray-700"
+                  >Eco-friendly cleaning products</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-blue-500 text-xl mr-3 mt-1"
+                ></i>
+                <span class="text-gray-700"
+                  >Mobile detailing services available</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-blue-500 text-xl mr-3 mt-1"
+                ></i>
+                <span class="text-gray-700">100% satisfaction guarantee</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Our <span class="text-blue-600">Services</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We offer a comprehensive range of detailing services to meet all
+            your vehicle care needs
+          </p>
+        </div>
+
+        <div class="flex overflow-x-auto pb-4 mb-8 scrollbar-hide">
+          <div class="flex space-x-2">
+            <button
+              class="service-filter px-4 py-2 rounded-full font-medium whitespace-nowrap"
+              data-filter="all"
+            >
+              All Services
+            </button>
+            <button
+              class="service-filter px-4 py-2 rounded-full font-medium whitespace-nowrap"
+              data-filter="exterior"
+            >
+              Exterior
+            </button>
+            <button
+              class="service-filter px-4 py-2 rounded-full font-medium whitespace-nowrap"
+              data-filter="interior"
+            >
+              Interior
+            </button>
+            <button
+              class="service-filter px-4 py-2 rounded-full font-medium whitespace-nowrap"
+              data-filter="protection"
+            >
+              Protection
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          id="services-container"
+        >
+          <!-- Services will be loaded from JavaScript array -->
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+            >View All Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Our <span class="text-blue-600">Work</span>
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Browse through our gallery of transformations and see the ShinePro
+            difference
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1566936737687-8d392239712f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Exterior Detailing"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Paint Correction</h3>
+              <p class="text-gray-600 text-sm">
+                Swirl marks and scratches removed
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+              alt="Interior Detailing"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Interior Deep Clean</h3>
+              <p class="text-gray-600 text-sm">Stains and odors eliminated</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Full Detailing"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Complete Makeover</h3>
+              <p class="text-gray-600 text-sm">
+                Interior and exterior restoration
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1494972308805-46337c858cad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+              alt="Dirty Car"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Before Service</h3>
+              <p class="text-gray-600 text-sm">
+                Vehicle condition before detailing
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1543465077-db45d34b88a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Dirty Interior"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Interior Before</h3>
+              <p class="text-gray-600 text-sm">
+                Stained seats and dirty carpets
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Ceramic Coating"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Ceramic Coating</h3>
+              <p class="text-gray-600 text-sm">Long-lasting paint protection</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1580273916550-e4c0b05e59bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Headlight Restoration"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Headlight Restoration</h3>
+              <p class="text-gray-600 text-sm">
+                Improved visibility and appearance
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1502160348070-6a60d6e1f1e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Engine Detailing"
+              class="w-full h-64 object-cover transition duration-300 hover:scale-110"
+            />
+            <div class="p-4 bg-white">
+              <h3 class="font-bold">Engine Bay Cleaning</h3>
+              <p class="text-gray-600 text-sm">Spotless engine compartment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#contact"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+            >Book Your Detail</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            What Our <span class="text-blue-600">Clients</span> Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it - hear from our satisfied customers
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Michael S."
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Michael S.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "I've taken my car to several detailers over the years, but
+              ShinePro is by far the best. My 5-year-old BMW looks brand new
+              after their full detailing package. Worth every penny!"
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  alt="Sarah L."
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Sarah L.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "As a mom with two kids and a dog, my SUV was a mess. The interior
+              detailing service completely transformed my car - it's cleaner now
+              than when I bought it! The team was professional and efficient."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/75.jpg"
+                  alt="David K."
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">David K.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The mobile detailing option saved me so much time. They came to
+              my office and detailed my car while I worked. The paint correction
+              work on my black car was incredible - swirl marks completely
+              gone!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Restore Your Vehicle's Shine?
+        </h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Book your detailing service today and experience the ShinePro
+          difference
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#contact"
+            class="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+            >Book Now</a
+          >
+          <a
+            href="tel:+15551234567"
+            class="bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300 transform hover:scale-105"
+          >
+            <i class="fas fa-phone mr-2"></i> (555) 123-4567
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              Contact <span class="text-blue-600">Us</span>
+            </h2>
+            <p class="text-gray-700 mb-8">
+              Have questions or ready to schedule your appointment? Reach out to
+              us using the form or contact information below.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-blue-500 text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Our Location</h4>
+                  <p class="text-gray-700">
+                    123 Auto Detail Lane<br />Detroit, MI 48201
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt text-blue-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Phone</h4>
+                  <p class="text-gray-700">(555) 123-4567</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-blue-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Email</h4>
+                  <p class="text-gray-700">info@shineprodetailing.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-clock text-blue-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Hours</h4>
+                  <p class="text-gray-700">
+                    Monday - Friday: 8am - 6pm<br />Saturday: 9am - 4pm<br />Sunday:
+                    Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <form class="bg-white p-8 rounded-xl shadow-lg">
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 font-bold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 font-bold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="phone" class="block text-gray-700 font-bold mb-2"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="service" class="block text-gray-700 font-bold mb-2"
+                  >Service Interested In</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Select a service</option>
+                  <option value="exterior">Exterior Detailing</option>
+                  <option value="interior">Interior Detailing</option>
+                  <option value="full">Full Detailing</option>
+                  <option value="ceramic">Ceramic Coating</option>
+                  <option value="paint">Paint Correction</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 font-bold mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-car-side text-3xl text-blue-500 mr-2"></i>
+              <span class="text-2xl font-bold"
+                >Shine<span class="text-blue-500">Pro</span></span
+              >
+            </div>
+            <p class="text-gray-400 max-w-xs">
+              Professional auto detailing services that restore your vehicle's
+              original beauty and protection.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-400 hover:text-white transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-400 hover:text-white transition"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gallery"
+                    class="text-gray-400 hover:text-white transition"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    class="text-gray-400 hover:text-white transition"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-4">Services</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Exterior Detailing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Interior Detailing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Full Detailing</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Ceramic Coating</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Paint Correction</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-4">Connect</h3>
+              <div class="flex space-x-4 mb-4">
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-facebook-f text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-instagram text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-twitter text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-yelp text-xl"></i
+                ></a>
+              </div>
+              <p class="text-gray-400">Subscribe to our newsletter</p>
+              <div class="flex mt-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900"
+                />
+                <button
+                  class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2023 ShinePro Auto Detailing. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fixed Bottom Menu (Mobile) -->
+    <div class="fixed-bottom-menu md:hidden">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-around">
+          <a href="#home" class="flex flex-col items-center text-white text-sm">
+            <i class="fas fa-home text-xl mb-1"></i>
+            <span>Home</span>
+          </a>
+          <a
+            href="#services"
+            class="flex flex-col items-center text-white text-sm"
+          >
+            <i class="fas fa-concierge-bell text-xl mb-1"></i>
+            <span>Services</span>
+          </a>
+          <a
+            href="#gallery"
+            class="flex flex-col items-center text-white text-sm"
+          >
+            <i class="fas fa-images text-xl mb-1"></i>
+            <span>Gallery</span>
+          </a>
+          <a
+            href="#contact"
+            class="flex flex-col items-center text-white text-sm"
+          >
+            <i class="fas fa-phone text-xl mb-1"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-24 md:bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
