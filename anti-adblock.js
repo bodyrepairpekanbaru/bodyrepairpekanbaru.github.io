@@ -1,64 +1,109 @@
-// Fungsi untuk mendeteksi adblock
+// Fungsi untuk mendeteksi adblock secara lebih akurat
 function detectAdblock() {
   return new Promise((resolve) => {
-    // Method 1: Deteksi melalui Google AdSense
-    const adsToDetect = document.createElement("div");
-    adsToDetect.innerHTML = "&nbsp;";
-    adsToDetect.setAttribute("class", "adsense");
-    adsToDetect.setAttribute(
-      "style",
-      "width:1px; height:1px; position: absolute; left: -10000px;",
-    );
-    document.body.appendChild(adsToDetect);
-
-    // Method 2: Deteksi fetch ke ad server
-    const originalFetch = window.fetch;
-    window.fetch = function (...args) {
-      const url = args[0]?.toString() || "";
-      if (url.includes("ads") || url.includes("doubleclick")) {
-        resolve(false); // Ads loaded successfully
-      }
-      return originalFetch.apply(this, args);
+    // Method 1: Deteksi melalui script blocking
+    const testScript = document.createElement("script");
+    testScript.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    testScript.async = true;
+    testScript.onerror = () => {
+      resolve(true); // Adblock detected
     };
+    testScript.onload = () => {
+      resolve(false); // No adblock
+    };
+    document.head.appendChild(testScript);
 
-    // Timeout - jika 3 detik ada ads, resolve dengan true (adblock terdeteksi)
+    // Method 2: Timeout fallback
     setTimeout(() => {
-      window.fetch = originalFetch;
-      document.body.removeChild(adsToDetect);
-      resolve(true); // Adblock terdeteksi
-    }, 3000);
+      resolve(true); // Assume adblock if script doesn't load
+    }, 2000);
   });
 }
 
-// Fungsi untuk menampilkan warning
+// Fungsi alternatif deteksi dengan bait
+function detectAdblockByBait() {
+  return new Promise((resolve) => {
+    // Buat elemen dummy yang dikira iklan
+    const bait = document.createElement("div");
+    bait.innerHTML = "&nbsp;";
+    bait.setAttribute("id", "advertisement-container");
+    bait.setAttribute("style", "display:none;");
+    document.body.appendChild(bait);
+
+    // Cek ukuran - jika 0, berarti dihapus oleh adblock
+    setTimeout(() => {
+      if (bait.offsetHeight === 0) {
+        document.body.removeChild(bait);
+        resolve(true); // Adblock terdeteksi
+      } else {
+        document.body.removeChild(bait);
+        resolve(false); // Tidak ada adblock
+      }
+    }, 1500);
+  });
+}
+
+// Fungsi untuk menampilkan warning yang persistent
 function showAdblockWarning() {
+  // Hapus warning yang sudah ada
+  const existingWarning = document.getElementById("adblock-warning");
+  if (existingWarning) {
+    existingWarning.remove();
+  }
+
   const overlay = document.createElement("div");
   overlay.id = "adblock-warning";
   overlay.innerHTML = `
     <div class="adblock-container">
       <div class="adblock-content">
-        <h2>⚠️ Adblock Terdeteksi</h2>
-        <p>Kami mendeteksi Anda menggunakan adblocker. Konten gratis kami didukung oleh iklan.</p>
-        <p>Silakan nonaktifkan adblock untuk melanjutkan menggunakan website ini.</p>
-        <button id="close-warning" class="btn-warning">Saya Paham</button>
+        <div class="adblock-icon">⚠️</div>
+        <h2>Adblock Terdeteksi</h2>
+        <p>Kami mendeteksi Anda menggunakan adblocker. Website ini memerlukan iklan untuk tetap berjalan.</p>
+        <p><strong>Silakan nonaktifkan adblock untuk mengakses konten.</strong></p>
+        <div class="adblock-actions">
+          <button id="disable-content" class="btn-primary">Saya Mengerti, Nonaktifkan Adblock</button>
+          <button id="close-warning" class="btn-secondary">Saya Tahu Risikonya</button>
+        </div>
       </div>
     </div>
   `;
 
   document.body.appendChild(overlay);
 
+  // Blur konten utama
+  document.body.style.filter = "blur(8px)";
+  document.body.style.pointerEvents = "none";
+
   document.getElementById("close-warning").addEventListener("click", () => {
-    overlay.remove();
+    overlay.style.display = "none";
+    document.body.style.filter = "none";
+    document.body.style.pointerEvents = "auto";
+  });
+
+  document.getElementById("disable-content").addEventListener("click", () => {
+    alert(
+      "Silakan nonaktifkan adblock di pengaturan browser Anda dan refresh halaman ini.",
+    );
   });
 }
 
-// Inisialisasi
+// Inisialisasi dengan pengecekan ganda
 document.addEventListener("DOMContentLoaded", async () => {
-  const hasAdblock = await detectAdblock();
+  // Method 1: Deteksi script
+  const hasAdblock1 = await detectAdblock();
+
+  // Method 2: Deteksi bait (jika method 1 tidak mendeteksi)
+  let hasAdblock2 = false;
+  if (!hasAdblock1) {
+    hasAdblock2 = await detectAdblockByBait();
+  }
+
+  const hasAdblock = hasAdblock1 || hasAdblock2;
+
+  console.log("Adblock detected:", hasAdblock);
 
   if (hasAdblock) {
     showAdblockWarning();
-    // Opsional: blur konten atau disable fitur tertentu
-    document.body.style.filter = "blur(5px)";
   }
 });
